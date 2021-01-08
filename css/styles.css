@@ -1,0 +1,279 @@
+:root {
+    /* ## Colors */
+    /* ### Primary */
+    /* #### Text */    
+    /* (sub-heading at the top of the app UI) */
+    --pale-Violet: hsl(276, 100%, 81%);
+    /* (chat on the left) */
+    --moderate-Violet: hsl(276, 55%, 52%);
+    /* (chat on the right) */
+    --desaturated-Dark-Violet: hsl(271, 15%, 43%);
+    /* (placeholder text) */
+    --grayish-Blue: hsl(206, 6%, 79%);
+    /* (main heading) */
+    --very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    /* (paragraph) */
+    --dark-Grayish-Violet: hsl(270, 7%, 64%);
+    
+    /* #### Gradients */   
+    /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+    --light-Magenta: hsl(293, 100%, 63%);
+    --light-Violet: hsl(264, 100%, 61%);
+    
+    /* ### Secondary */
+    
+    --white: hsl(0, 0%, 100%);
+    /* (app background) */
+    --light-Grayish-Violet: hsl(270, 20%, 96%);
+    /* (submit button background) */
+    --very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    /* (radio button outline) */
+    --very-Light-Magenta: hsl(289, 100%, 72%);
+       
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+body::after,
+body::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+} 
+body::before {
+    min-height: 100vh;
+    width: 300px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, var(--light-Magenta), var(--light-Violet));
+    border-bottom-left-radius: 150px 90px;
+    border-bottom-right-radius: 150px 90px;
+}
+body::after {
+    right: 0;
+    background-color: #f5f3f7;
+    width: 260px;
+    min-height: 80vh;
+    border-top-left-radius: 290px;
+}
+.container {
+    max-width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+}
+
+.phone {
+  border: 10px solid #fff;
+  width: 280px;
+  max-width: 350px;
+  min-height: 450px;
+  border-radius: 22px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: var(--light-Grayish-Violet);
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, var(--light-Violet), var(--light-Magenta));
+  padding: 20px 10px 5px;
+  position: relative;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: var(--white);
+}
+.top::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 20px;
+  background: var(--white);
+  position: absolute;
+  top: 0;
+  left: 28%;
+  border-bottom-left-radius: 14px 17px;
+  border-bottom-right-radius: 14px 17px;
+}
+.top__left {
+  display: flex;
+  align-items: center;
+}
+.top__left-icon {
+  margin-right: 10px;
+}
+.top__img {
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid #fff;
+}
+.top__name {
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 600;
+}
+.top__state {
+  margin-top: 0;  
+  font-size: 8px;
+}
+/*--------Chat------*/
+.chat {
+  padding: 10px;
+  font-size: 10px;
+}
+.chat__left {
+  max-width: 160px;
+  color: var(--moderate-Violet);
+}
+.chat__left-p {
+  padding: 8px;
+  border-radius: 10px;
+  background: #ede5f4;
+}
+.chat__left-p:first-child {
+  margin-top: 0;
+}
+.chat__photos {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+}
+.chat__img {
+  border-radius: 6px;
+}
+.chat__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: var(--desaturated-Dark-Violet);
+}
+.chat__right-p {
+  background: var(--white);
+  padding: 8px;
+  border-radius: 10px;
+  max-width: 140px;
+}
+.chat__right-p:last-child {
+  margin-top: 0;
+}
+.chat__price-p {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 10px;
+  max-width: 180px;
+  background: linear-gradient(to right, var(--light-Magenta), var(--light-Violet));
+  color: var(--white);
+}
+.chat__price-p::before {
+  content: "";
+  display: block;
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+.chat__price-str {
+  font-size: 15px;
+  margin-left: 40px;
+}
+.chat__price-str-md {
+  margin-left: 60px;
+}
+/*--------Bottom--------*/
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  background: var(--white);
+  padding-right: 10px;
+  padding-left: 30px;
+  margin: 0 10px 10px;
+}
+.bottom__p {
+  color: #d0d0d0;
+  font-size: 12px;
+  margin: 0;
+}
+.bottom__icon {
+  background: var(--very-Dark-Desaturated-Violet);  
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center; 
+  margin: 8px 0;
+  margin-right: -4px;
+}
+.bottom__i {
+  color: var(--white);
+  margin-top: 4px;
+}
+
+
+.info {
+    max-width: 450px;
+}
+.info h1 {
+    color: var(--very-Dark-Desaturated-Violet);
+    font-weight: 700;
+}
+.info p {
+    color: var(--dark-Grayish-Violet);
+    font-weight: 400;   
+}
+.attribution {
+    margin-top: 10px;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+}
+@media screen and (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 376px) {
+    body::before {
+        height: 400px;
+        width: 180px;
+        border-bottom-right-radius: 180px 190px;
+        border-bottom-left-radius: 0;
+    }
+    body::after {
+        max-width: 180px;
+        height: 400px;
+        background-color: transparent;
+    }
+    .container {
+        flex-wrap: wrap;    
+        gap: 50px;
+    }
+    .phone {
+        margin-top: 60px;
+    }
+    .attribution {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+}
